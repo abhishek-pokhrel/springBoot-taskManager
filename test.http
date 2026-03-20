@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:8080/api/tasks
+
+GET {{baseUrl}}
+Accept: application/json
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "title": "Test API Task",
+  "description": "Created from test.http file"
+}
+
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "title": "Second Task",
+  "description": "Another sample task"
+}
+
+PUT {{baseUrl}}/1/toggle
+Accept: application/json
+
+PUT {{baseUrl}}/2/toggle
+Accept: application/json
+
+DELETE {{baseUrl}}/1
+
+DELETE {{baseUrl}}/2
